@@ -1,0 +1,12 @@
+### This fortran code creates input file for feff run, 
+### by making coordinate transform to place the absorbing atom 
+### at the center and rearranging all other atoms  
+### in order from closest to the farthest
+### For any other input parameters Documentation of FEFF9 should be consulted
+
+### Running for a single snapshot (see the example directory)
+1. You should have the the XYZ structure file present where you run it. Name it as "Structure.xyz"
+2. Execute: feffInp <input-para, where input-para contains all the inpur parameters
+
+### Running for a trajectory
+ Use the script "do_run_for_traj" located under example/for-a-trajectory/ to generate feff.inp for each configuration

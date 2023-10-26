@@ -1,0 +1,1 @@
+gfortran src/feffInp.f90 -o bin/feffInp 
