@@ -1,0 +1,43 @@
+###########################################################################################
+# initial info                                                                            # 
+# in this example, total line number of lines in md-traj.xyz is 546546                    #
+# total number of atom in each config is 544, so total number of line in each config 546  #
+# this script creates feff input for 1000 configurations                                  #   
+###########################################################################################
+for((i=0;i<1001;i++))
+do
+ mkdir run${i}
+ let j=546546-$i*546
+ tail -$j md-production.xyz | head -546 > Structure.xyz
+ ../../bin/feffInp <input-para
+ cat head.dat feff-conf.xyz  > run${i}/feff.inp
+ rm Structure.xyz
+done
+
+#################################################
+# running feff for 50 configs at the same time  #
+# feff must be install separately and should be #
+# in the user's path                            #
+# ###############################################
+#for((i=0;i<21;i++))
+#do
+# for((j=(50*$i);j<(50*$i+49);j++))
+# do
+#   cd  run${j}/
+#   feff > out.dat &
+#   cd ../
+#   let l=${j}+1
+# done
+# cd run${l}/
+# feff > out.dat
+# cd ../
+#done
+
+# ######################################################################
+# compute average chi by averaging over all 1000 runs                
+# in the xmu.dat output file:
+# 3rd column is k, same for all runs, and 6th column is chi
+# average the 6th column from the 1000 output files to get average chi
+#  or use directly chi.dat
+# ######################################################################
+
