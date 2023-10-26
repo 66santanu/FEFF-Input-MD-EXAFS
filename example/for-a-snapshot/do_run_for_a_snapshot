@@ -1,0 +1,8 @@
+###########################################################################################
+ ../../bin/feffInp <input-para
+ cat head.dat feff-conf.xyz  > feff.inp
+ 
+##########################
+# run feff
+#feff feff.inp> out
+# use chi.dat or 3rd (k) and 6th (chi) column of xmu.dat

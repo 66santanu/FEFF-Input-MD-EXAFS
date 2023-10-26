@@ -1,0 +1,7 @@
+544 544 5 ! number of atoms, center atom (index start from 1), number of atom type including the center atom
+0 Pm    ! Center atom (start label with 0)
+1 O     ! 2nd type
+2 N     ! 3rd type
+3 C     ! 4th type
+4 H     ! 5th type
+18.000 18.000 18.000 ! boxsize, x,y,z component
