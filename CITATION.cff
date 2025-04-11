@@ -1,0 +1,9 @@
+cff-version: 1.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: Roy
+  given-names: Santanu
+orcid: https://orcid.org/0000-0001-6991-8205
+title:66santanu/FEFF-Input-MD-EXAFS: Create_FEFF_Input
+version: FEFF-MD_EXAFS-INPUT
+date-released: 2023-10-26
